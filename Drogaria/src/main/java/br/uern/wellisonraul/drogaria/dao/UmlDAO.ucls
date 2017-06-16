@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.14" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="br.uern.wellisonraul.drogaria.dao.ServicoDAO" project="Drogaria" 
+    file="/Drogaria/src/main/java/br/uern/wellisonraul/drogaria/dao/ServicoDAO.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="77" width="118" x="-57" y="387"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="br.uern.wellisonraul.drogaria.dao.GenericDAO" project="Drogaria" 
+    file="/Drogaria/src/main/java/br/uern/wellisonraul/drogaria/dao/GenericDAO.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="257" width="268" x="531" y="90"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="br.uern.wellisonraul.drogaria.dao.FabricanteDAO" project="Drogaria" 
+    file="/Drogaria/src/main/java/br/uern/wellisonraul/drogaria/dao/FabricanteDAO.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="77" width="118" x="101" y="387"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="br.pro.delfino.drogaria.dao.UsuarioDAO" project="Drogaria" 
+    file="/Drogaria/src/main/java/br/pro/delfino/drogaria/dao/UsuarioDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="77" width="118" x="259" y="387"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="br.pro.delfino.drogaria.dao.EstadoDAO" project="Drogaria" 
+    file="/Drogaria/src/main/java/br/pro/delfino/drogaria/dao/EstadoDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="77" width="118" x="417" y="387"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="br.pro.delfino.drogaria.dao.CidadeDAO" project="Drogaria" 
+    file="/Drogaria/src/main/java/br/pro/delfino/drogaria/dao/CidadeDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="95" width="209" x="575" y="387"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="br.pro.delfino.drogaria.dao.PessoaDAO" project="Drogaria" 
+    file="/Drogaria/src/main/java/br/pro/delfino/drogaria/dao/PessoaDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="77" width="118" x="824" y="387"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="br.pro.delfino.drogaria.dao.ClienteDAO" project="Drogaria" 
+    file="/Drogaria/src/main/java/br/pro/delfino/drogaria/dao/ClienteDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="77" width="118" x="982" y="387"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="br.uern.wellisonraul.drogaria.dao.ProdutoDAO" project="Drogaria" 
+    file="/Drogaria/src/main/java/br/uern/wellisonraul/drogaria/dao/ProdutoDAO.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="77" width="118" x="1140" y="387"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <generalization id="10">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <generalization id="11">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <generalization id="12">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <generalization id="13">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <generalization id="14">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <generalization id="15">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <generalization id="16">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <generalization id="17">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

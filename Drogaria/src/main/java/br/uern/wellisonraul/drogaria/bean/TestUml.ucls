@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.14" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="br.pro.delfino.drogaria.bean.ClienteBean" project="Drogaria" 
+    file="/Drogaria/src/main/java/br/pro/delfino/drogaria/bean/ClienteBean.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="293" width="181" x="135" y="-14"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="br.pro.delfino.drogaria.bean.PessoaBean" project="Drogaria" 
+    file="/Drogaria/src/main/java/br/pro/delfino/drogaria/bean/PessoaBean.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="455" width="181" x="356" y="-14"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="br.pro.delfino.drogaria.bean.CidadeBean" project="Drogaria" 
+    file="/Drogaria/src/main/java/br/pro/delfino/drogaria/bean/CidadeBean.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="329" width="175" x="577" y="-14"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="br.pro.delfino.drogaria.bean.EstadoBean" project="Drogaria" 
+    file="/Drogaria/src/main/java/br/pro/delfino/drogaria/bean/EstadoBean.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="275" width="175" x="792" y="-14"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="br.uern.wellisonraul.drogaria.bean.ProdutoBean" project="Drogaria" 
+    file="/Drogaria/src/main/java/br/uern/wellisonraul/drogaria/bean/ProdutoBean.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="329" width="211" x="1007" y="-14"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="br.uern.wellisonraul.drogaria.bean.FabricanteBean" project="Drogaria" 
+    file="/Drogaria/src/main/java/br/uern/wellisonraul/drogaria/bean/FabricanteBean.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="275" width="211" x="1258" y="-14"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
