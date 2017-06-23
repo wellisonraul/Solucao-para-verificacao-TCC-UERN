@@ -7,22 +7,24 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+
+import br.uern.wellisonraul.util.UtilitarioConfiguracao;
 import ee.tkasekamp.ltlminer.StarterTest;
 
 public class InvocaFerramentas {
 	
-	public void chamarCADP(File arquivo) throws IOException{		
+	public boolean chamarCADP(File arquivo) throws IOException{		
 		// COMANDO PARA EXECUTAR O TERMINAL
 		Runtime r = Runtime.getRuntime();
 		System.out.println();
 		Process p = r.exec(new String[]{"/bin/bash", "-c", "cd /home/wellisonraul/cadp/com && ./seq.open "+arquivo+" evaluator -verbose -bfs -diag evuluator.bcg ./M_A1.mcl"});
 		
 		// Impressão no arquivo.txt
-		saidaCADP(p);
+		return saidaCADP(p);
 		
 	}
 	
-	public void saidaCADP(Process p) throws IOException{
+	public boolean saidaCADP(Process p) throws IOException{
 		// LEITOR DO RETORNO DO DASH
 		BufferedReader br = null;
 		
@@ -32,7 +34,7 @@ public class InvocaFerramentas {
 		br = new BufferedReader(isr);
 			    
 		// CRIA O ARQUIVO
-		File saida = new File( "/home/wellisonraul/saida.txt" );
+		File saida = new File(UtilitarioConfiguracao.CADP_SAIDA);
 			    
 		//verifica se o arquivo ou diretório existe
 		boolean existe = saida.exists();
@@ -46,16 +48,26 @@ public class InvocaFerramentas {
 		BufferedWriter bw = new BufferedWriter( fw );
 			    
 		String resultado;
+		boolean result = true;
 		while((resultado = br.readLine()) != null) {
 			if(resultado.contains("FALSE") || resultado.contains("TRUE")){
+				if(resultado.contains("FALSE")){
+					result = false;
+				}else{
+					result = true;
+				}
+				
 				bw.write(resultado);
 				bw.newLine();
+				
 			}
 		}    
 		
 		//fecha os recursos
 		bw.close();
 		fw.close();
+		
+		return result;
 	}
 	
 	// MODIFICAÇÃO

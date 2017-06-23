@@ -16,16 +16,27 @@ public class ProdutoEngine {
 		// TRATA QUESTÕES DO BANCO PARA O XLOG
 		ProdutoEngine pe = new ProdutoEngine();
 		pe.inicializacao();
+		try{
+			// CHAMA THREAD DE EXECUÇÃO
+			ExecucaoThread execucao = new ExecucaoThread();
+			Thread threadExecucao = new Thread(execucao);
+			threadExecucao.start();
+			
+			// CHAMA THREAD DE VERIFICAÇÃO
+			MonitorThread monitoramento = new MonitorThread(); 
+			Thread threadMonitoramento = new Thread(monitoramento);
+			threadMonitoramento.start();
+			int contadora = 0;
+			
+			while(true){
+				Thread.sleep(1000);
+				contadora++;
+				System.out.println(contadora);
+			}
+		}catch(Exception e){
+			
+		}
 		
-		// CHAMA THREAD DE EXECUÇÃO
-		ExecucaoThread execucao = new ExecucaoThread();
-		Thread threadExecucao = new Thread(execucao);
-		threadExecucao.start();
-		
-		// CHAMA THREAD DE VERIFICAÇÃO
-		MonitorThread monitoramento = new MonitorThread(); 
-		Thread threadMonitoramento = new Thread(monitoramento);
-		threadMonitoramento.start();
 		
 	}
 	

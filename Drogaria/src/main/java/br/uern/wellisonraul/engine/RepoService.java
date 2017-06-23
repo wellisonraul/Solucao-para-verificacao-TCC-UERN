@@ -1,5 +1,9 @@
 package br.uern.wellisonraul.engine;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
@@ -23,6 +27,7 @@ import br.uern.wellisonraul.drogaria.dominio.Execucao;
 import br.uern.wellisonraul.drogaria.dominio.Fabricante;
 import br.uern.wellisonraul.drogaria.dominio.Produto;
 import br.uern.wellisonraul.drogaria.dominio.Servico;
+import br.uern.wellisonraul.util.UtilitarioConfiguracao;
 
 @SuppressWarnings("serial")
 @ManagedBean
@@ -124,6 +129,7 @@ public class RepoService implements Serializable{
 		
 		try {
 			
+			
 			// TRATAMENTO DE CONSULTA AO BANCO DIRETAMENTO | CRIAR SERVIÇO.
 			servicos = servicoDAO.listarPeloTipo(metodo,"posicao");
 			
@@ -137,10 +143,11 @@ public class RepoService implements Serializable{
 					
 					// GERADOR DE ERROS
 					Random gerador = new Random();
-					int r = gerador.nextInt(2);
+					// MODIFICAÇÕES
+					int r = gerador.nextInt(10);
 					
 					
-					if(r==0){
+					if(r>=0 && r<=4){
 						caminho = cliente.target(s.getUri()+"vaidarerro").path(id);
 					}else{
 						caminho = cliente.target(s.getUri()).path(id);
@@ -172,8 +179,8 @@ public class RepoService implements Serializable{
 					while(contador!=2 && resposta.getStatus()==404){
 						
 						// CRIAR OU REVOGAR ERROS EM TODAS AS INSTÂNCIAS. 
-						r = gerador.nextInt(2);
-						if(r==0){
+						r = gerador.nextInt(10);
+						if(r>=0 && r<=4){
 							caminho = cliente.target(s.getUri()+"vaidarerro").path(id);
 						}else{
 							caminho = cliente.target(s.getUri()).path(id);
@@ -203,6 +210,35 @@ public class RepoService implements Serializable{
 					
 					// SERVIDOR RESPONDE CORRETAMENTE
 					if(resposta.getStatus()==200){
+						System.out.println(s.getNome());
+						if(s.getNome().equals("buscarFabricante")){
+							try {
+								
+								File arquivoDeConversao = new File("/home/wellisonraul/saida_teste1_prom.txt"); // CRIA O ARQUIVO
+								FileWriter escreveArquivo = null;
+								BufferedWriter buferizadorArquivo = null;
+								try {
+									escreveArquivo = new FileWriter(arquivoDeConversao,true);
+									buferizadorArquivo = new BufferedWriter(escreveArquivo);
+								} catch (IOException e1) {
+									// TODO Auto-generated catch block
+									e1.printStackTrace();
+								}
+								
+								int resultado = (int) s.getTempo_execucao();
+								buferizadorArquivo.write(String.valueOf(resultado));
+								buferizadorArquivo.newLine();
+								buferizadorArquivo.close();
+								escreveArquivo.close();
+								
+							} catch (IOException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							}
+							
+							
+						}
+						
 						stringBuilder = new StringBuilder();
 						stringBuilder.append(formatadorData.format(data));
 						stringBuilder.append("T"+formatadorHora.format(data));
@@ -225,6 +261,34 @@ public class RepoService implements Serializable{
 					
 					// URI INVALIDO
 					if(resposta.getStatus()==404){
+						
+						
+						if(s.getNome().equals("buscarFabricante")){
+							try {
+								File arquivoDeConversao = new File("/home/wellisonraul/saida_teste1_prom.txt"); // CRIA O ARQUIVO
+								FileWriter escreveArquivo = null;
+								BufferedWriter buferizadorArquivo = null;
+								try {
+									escreveArquivo = new FileWriter(arquivoDeConversao,true);
+									buferizadorArquivo = new BufferedWriter(escreveArquivo);
+								} catch (IOException e1) {
+									// TODO Auto-generated catch block
+									e1.printStackTrace();
+								}
+								
+								int resultado = (int) s.getTempo_execucao();
+								buferizadorArquivo.write(String.valueOf(resultado));
+								buferizadorArquivo.newLine();
+								buferizadorArquivo.close();
+								escreveArquivo.close();
+								
+							} catch (IOException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							}
+						}
+						
+						
 						System.out.println("Serviço "+s.getNome()+" na posição "+(contador+1)+" não funcionando erro: "+resposta.getStatus()); // RESOLVER AQUI DEPOIS
 						json = "";
 						for(Servico ordernacao: servicos){

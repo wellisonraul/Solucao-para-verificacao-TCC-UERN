@@ -20,7 +20,18 @@ public class Servico extends GenericDomain{
 	@Column(nullable = false)
 	private double confiabilidade_real;
 	
+	@Column(nullable = false)
+	private double tempo_execucao;
 	
+	
+	public double getTempo_execucao() {
+		return tempo_execucao;
+	}
+
+	public void setTempo_execucao(double tempo_execucao) {
+		this.tempo_execucao = tempo_execucao;
+	}
+
 	public double getConfiabilidade_real() {
 		return confiabilidade_real;
 	}

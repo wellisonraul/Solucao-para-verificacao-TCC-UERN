@@ -62,7 +62,7 @@ public class MonitorThread implements Runnable{
 	public void run() {
 		try{
 			while(true){
-				Thread.sleep(5000);
+				Thread.sleep(13000);
 				// INICIO DO BANCO PARA XES
 				inicio = inicioBanco();
 				// FINAL DO BANCO PARA XES
@@ -70,7 +70,7 @@ public class MonitorThread implements Runnable{
 				// VERIFICADOR PARA TRANSFORMAR O XES
 				Verificador v = new Verificador();
 				List <Execucao> execucoes = v.ConsultaInstâncias(inicio, ultimo);
-				v.VerificadorProM(execucoes);
+				v.VerificadorFerramentas(execucoes);
 			}
 			
 		}catch(Exception e){
