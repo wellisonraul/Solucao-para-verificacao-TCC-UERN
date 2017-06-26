@@ -1,5 +1,6 @@
 package br.uern.wellisonraul.engine;
 
+import java.io.File;
 import java.util.List;
 
 import br.uern.wellisonraul.drogaria.dao.ExecucaoDAO;
@@ -12,7 +13,8 @@ import br.uern.wellisonraul.threads.MonitorThread;
 public class ProdutoEngine {
 	
 	public static void main(String[] args) throws Exception{
-		
+		File n = new File("/home/wellisonraul/saida_teste1_prom.txt");
+		n.delete();
 		// TRATA QUESTÕES DO BANCO PARA O XLOG
 		ProdutoEngine pe = new ProdutoEngine();
 		pe.inicializacao();
@@ -31,7 +33,7 @@ public class ProdutoEngine {
 			while(true){
 				Thread.sleep(1000);
 				contadora++;
-				System.out.println(contadora);
+				System.out.println("Relôgio: "+contadora);
 			}
 		}catch(Exception e){
 			

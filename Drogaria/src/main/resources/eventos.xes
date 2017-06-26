@@ -19,240 +19,210 @@
 	<trace>
 		<event>
 			<string key="concept:name" value="buscarFabricante1"/>
-			<date key="time:timestamp" value="2017-06-23T12:10:41"/>
+			<date key="time:timestamp" value="2017-06-26T13:53:38"/>
 			<string key="lifecycle:transition" value="start"/>
 		</event>
 		<event>
 			<string key="concept:name" value="buscarFabricante1"/>
-			<date key="time:timestamp" value="2017-06-23T12:10:41"/>
+			<date key="time:timestamp" value="2017-06-26T13:53:38"/>
 			<string key="lifecycle:transition" value="start"/>
 		</event>
 		<event>
 			<string key="concept:name" value="buscarFabricante1"/>
-			<date key="time:timestamp" value="2017-06-23T12:10:41"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="concept:name" value="buscarFabricante1"/>
-			<date key="time:timestamp" value="2017-06-23T12:10:41"/>
+			<date key="time:timestamp" value="2017-06-26T13:53:38"/>
 			<string key="lifecycle:transition" value="complete"/>
 		</event>
 		<event>
-			<string key="concept:name" value="buscarProduto3"/>
-			<date key="time:timestamp" value="2017-06-23T12:10:42"/>
+			<string key="concept:name" value="buscarProduto4"/>
+			<date key="time:timestamp" value="2017-06-26T13:53:39"/>
 			<string key="lifecycle:transition" value="start"/>
 		</event>
 		<event>
-			<string key="concept:name" value="buscarProduto3"/>
-			<date key="time:timestamp" value="2017-06-23T12:10:42"/>
+			<string key="concept:name" value="buscarProduto4"/>
+			<date key="time:timestamp" value="2017-06-26T13:53:39"/>
 			<string key="lifecycle:transition" value="complete"/>
 		</event>
 		<event>
 			<string key="concept:name" value="quantidadeProdutos6"/>
-			<date key="time:timestamp" value="2017-06-23T12:10:42"/>
+			<date key="time:timestamp" value="2017-06-26T13:53:39"/>
 			<string key="lifecycle:transition" value="start"/>
 		</event>
 		<event>
 			<string key="concept:name" value="quantidadeProdutos6"/>
-			<date key="time:timestamp" value="2017-06-23T12:10:42"/>
+			<date key="time:timestamp" value="2017-06-26T13:53:39"/>
+			<string key="lifecycle:transition" value="complete"/>
+		</event>
+	</trace>
+	<trace>
+		<event>
+			<string key="concept:name" value="buscarFabricante1"/>
+			<date key="time:timestamp" value="2017-06-26T13:53:41"/>
+			<string key="lifecycle:transition" value="start"/>
+		</event>
+		<event>
+			<string key="concept:name" value="buscarFabricante1"/>
+			<date key="time:timestamp" value="2017-06-26T13:53:41"/>
+			<string key="lifecycle:transition" value="complete"/>
+		</event>
+		<event>
+			<string key="concept:name" value="buscarProduto4"/>
+			<date key="time:timestamp" value="2017-06-26T13:53:41"/>
+			<string key="lifecycle:transition" value="start"/>
+		</event>
+		<event>
+			<string key="concept:name" value="buscarProduto4"/>
+			<date key="time:timestamp" value="2017-06-26T13:53:41"/>
+			<string key="lifecycle:transition" value="start"/>
+		</event>
+		<event>
+			<string key="concept:name" value="buscarProduto4"/>
+			<date key="time:timestamp" value="2017-06-26T13:53:41"/>
+			<string key="lifecycle:transition" value="complete"/>
+		</event>
+		<event>
+			<string key="concept:name" value="quantidadeProdutos6"/>
+			<date key="time:timestamp" value="2017-06-26T13:53:42"/>
 			<string key="lifecycle:transition" value="start"/>
 		</event>
 		<event>
 			<string key="concept:name" value="quantidadeProdutos6"/>
-			<date key="time:timestamp" value="2017-06-23T12:10:42"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="concept:name" value="quantidadeProdutos5"/>
-			<date key="time:timestamp" value="2017-06-23T12:10:42"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="concept:name" value="quantidadeProdutos5"/>
-			<date key="time:timestamp" value="2017-06-23T12:10:42"/>
+			<date key="time:timestamp" value="2017-06-26T13:53:42"/>
 			<string key="lifecycle:transition" value="complete"/>
 		</event>
 	</trace>
 	<trace>
 		<event>
 			<string key="concept:name" value="buscarFabricante1"/>
-			<date key="time:timestamp" value="2017-06-23T12:10:44"/>
+			<date key="time:timestamp" value="2017-06-26T13:53:43"/>
 			<string key="lifecycle:transition" value="start"/>
 		</event>
 		<event>
 			<string key="concept:name" value="buscarFabricante1"/>
-			<date key="time:timestamp" value="2017-06-23T12:10:44"/>
+			<date key="time:timestamp" value="2017-06-26T13:53:43"/>
+			<string key="lifecycle:transition" value="start"/>
+		</event>
+		<event>
+			<string key="concept:name" value="buscarFabricante1"/>
+			<date key="time:timestamp" value="2017-06-26T13:53:43"/>
+			<string key="lifecycle:transition" value="start"/>
+		</event>
+		<event>
+			<string key="concept:name" value="buscarFabricante1"/>
+			<date key="time:timestamp" value="2017-06-26T13:53:43"/>
 			<string key="lifecycle:transition" value="complete"/>
 		</event>
 		<event>
-			<string key="concept:name" value="buscarProduto3"/>
-			<date key="time:timestamp" value="2017-06-23T12:10:44"/>
+			<string key="concept:name" value="buscarProduto4"/>
+			<date key="time:timestamp" value="2017-06-26T13:53:43"/>
 			<string key="lifecycle:transition" value="start"/>
 		</event>
 		<event>
-			<string key="concept:name" value="buscarProduto3"/>
-			<date key="time:timestamp" value="2017-06-23T12:10:44"/>
+			<string key="concept:name" value="buscarProduto4"/>
+			<date key="time:timestamp" value="2017-06-26T13:53:43"/>
 			<string key="lifecycle:transition" value="complete"/>
 		</event>
 		<event>
-			<string key="concept:name" value="quantidadeProdutos5"/>
-			<date key="time:timestamp" value="2017-06-23T12:10:45"/>
+			<string key="concept:name" value="quantidadeProdutos6"/>
+			<date key="time:timestamp" value="2017-06-26T13:53:44"/>
+			<string key="lifecycle:transition" value="start"/>
+		</event>
+		<event>
+			<string key="concept:name" value="quantidadeProdutos6"/>
+			<date key="time:timestamp" value="2017-06-26T13:53:44"/>
+			<string key="lifecycle:transition" value="start"/>
+		</event>
+		<event>
+			<string key="concept:name" value="quantidadeProdutos6"/>
+			<date key="time:timestamp" value="2017-06-26T13:53:44"/>
 			<string key="lifecycle:transition" value="start"/>
 		</event>
 		<event>
 			<string key="concept:name" value="quantidadeProdutos5"/>
-			<date key="time:timestamp" value="2017-06-23T12:10:45"/>
+			<date key="time:timestamp" value="2017-06-26T13:53:44"/>
 			<string key="lifecycle:transition" value="start"/>
 		</event>
 		<event>
 			<string key="concept:name" value="quantidadeProdutos5"/>
-			<date key="time:timestamp" value="2017-06-23T12:10:45"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="concept:name" value="quantidadeProdutos5"/>
-			<date key="time:timestamp" value="2017-06-23T12:10:45"/>
+			<date key="time:timestamp" value="2017-06-26T13:53:44"/>
 			<string key="lifecycle:transition" value="complete"/>
 		</event>
 	</trace>
 	<trace>
 		<event>
 			<string key="concept:name" value="buscarFabricante1"/>
-			<date key="time:timestamp" value="2017-06-23T12:10:47"/>
+			<date key="time:timestamp" value="2017-06-26T13:53:45"/>
 			<string key="lifecycle:transition" value="start"/>
 		</event>
 		<event>
 			<string key="concept:name" value="buscarFabricante1"/>
-			<date key="time:timestamp" value="2017-06-23T12:10:47"/>
+			<date key="time:timestamp" value="2017-06-26T13:53:45"/>
 			<string key="lifecycle:transition" value="start"/>
 		</event>
 		<event>
 			<string key="concept:name" value="buscarFabricante1"/>
-			<date key="time:timestamp" value="2017-06-23T12:10:47"/>
+			<date key="time:timestamp" value="2017-06-26T13:53:45"/>
 			<string key="lifecycle:transition" value="complete"/>
 		</event>
 		<event>
 			<string key="concept:name" value="buscarProduto4"/>
-			<date key="time:timestamp" value="2017-06-23T12:10:48"/>
+			<date key="time:timestamp" value="2017-06-26T13:53:46"/>
 			<string key="lifecycle:transition" value="start"/>
 		</event>
 		<event>
 			<string key="concept:name" value="buscarProduto4"/>
-			<date key="time:timestamp" value="2017-06-23T12:10:48"/>
+			<date key="time:timestamp" value="2017-06-26T13:53:46"/>
+			<string key="lifecycle:transition" value="start"/>
+		</event>
+		<event>
+			<string key="concept:name" value="buscarProduto4"/>
+			<date key="time:timestamp" value="2017-06-26T13:53:46"/>
 			<string key="lifecycle:transition" value="complete"/>
 		</event>
 		<event>
 			<string key="concept:name" value="quantidadeProdutos5"/>
-			<date key="time:timestamp" value="2017-06-23T12:10:48"/>
+			<date key="time:timestamp" value="2017-06-26T13:53:46"/>
 			<string key="lifecycle:transition" value="start"/>
 		</event>
 		<event>
 			<string key="concept:name" value="quantidadeProdutos5"/>
-			<date key="time:timestamp" value="2017-06-23T12:10:48"/>
+			<date key="time:timestamp" value="2017-06-26T13:53:46"/>
 			<string key="lifecycle:transition" value="start"/>
 		</event>
 		<event>
 			<string key="concept:name" value="quantidadeProdutos5"/>
-			<date key="time:timestamp" value="2017-06-23T12:10:48"/>
+			<date key="time:timestamp" value="2017-06-26T13:53:46"/>
 			<string key="lifecycle:transition" value="complete"/>
 		</event>
 	</trace>
 	<trace>
 		<event>
 			<string key="concept:name" value="buscarFabricante1"/>
-			<date key="time:timestamp" value="2017-06-23T12:10:49"/>
+			<date key="time:timestamp" value="2017-06-26T13:53:47"/>
 			<string key="lifecycle:transition" value="start"/>
 		</event>
 		<event>
 			<string key="concept:name" value="buscarFabricante1"/>
-			<date key="time:timestamp" value="2017-06-23T12:10:49"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="concept:name" value="buscarFabricante1"/>
-			<date key="time:timestamp" value="2017-06-23T12:10:49"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="concept:name" value="buscarFabricante2"/>
-			<date key="time:timestamp" value="2017-06-23T12:10:49"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="concept:name" value="buscarFabricante2"/>
-			<date key="time:timestamp" value="2017-06-23T12:10:49"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="concept:name" value="buscarFabricante2"/>
-			<date key="time:timestamp" value="2017-06-23T12:10:49"/>
+			<date key="time:timestamp" value="2017-06-26T13:53:47"/>
 			<string key="lifecycle:transition" value="complete"/>
 		</event>
 		<event>
 			<string key="concept:name" value="buscarProduto4"/>
-			<date key="time:timestamp" value="2017-06-23T12:10:50"/>
+			<date key="time:timestamp" value="2017-06-26T13:53:48"/>
 			<string key="lifecycle:transition" value="start"/>
 		</event>
 		<event>
 			<string key="concept:name" value="buscarProduto4"/>
-			<date key="time:timestamp" value="2017-06-23T12:10:50"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="concept:name" value="buscarProduto4"/>
-			<date key="time:timestamp" value="2017-06-23T12:10:50"/>
+			<date key="time:timestamp" value="2017-06-26T13:53:48"/>
 			<string key="lifecycle:transition" value="complete"/>
 		</event>
 		<event>
 			<string key="concept:name" value="quantidadeProdutos5"/>
-			<date key="time:timestamp" value="2017-06-23T12:10:50"/>
+			<date key="time:timestamp" value="2017-06-26T13:53:48"/>
 			<string key="lifecycle:transition" value="start"/>
 		</event>
 		<event>
 			<string key="concept:name" value="quantidadeProdutos5"/>
-			<date key="time:timestamp" value="2017-06-23T12:10:50"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-	</trace>
-	<trace>
-		<event>
-			<string key="concept:name" value="buscarFabricante2"/>
-			<date key="time:timestamp" value="2017-06-23T12:10:52"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="concept:name" value="buscarFabricante2"/>
-			<date key="time:timestamp" value="2017-06-23T12:10:52"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="concept:name" value="buscarProduto4"/>
-			<date key="time:timestamp" value="2017-06-23T12:10:52"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="concept:name" value="buscarProduto4"/>
-			<date key="time:timestamp" value="2017-06-23T12:10:52"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="concept:name" value="buscarProduto4"/>
-			<date key="time:timestamp" value="2017-06-23T12:10:52"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="concept:name" value="quantidadeProdutos5"/>
-			<date key="time:timestamp" value="2017-06-23T12:10:53"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="concept:name" value="quantidadeProdutos5"/>
-			<date key="time:timestamp" value="2017-06-23T12:10:53"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="concept:name" value="quantidadeProdutos5"/>
-			<date key="time:timestamp" value="2017-06-23T12:10:53"/>
+			<date key="time:timestamp" value="2017-06-26T13:53:48"/>
 			<string key="lifecycle:transition" value="complete"/>
 		</event>
 	</trace>

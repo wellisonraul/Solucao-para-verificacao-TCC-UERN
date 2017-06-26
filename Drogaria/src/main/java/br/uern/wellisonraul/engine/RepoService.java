@@ -4,6 +4,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.LineNumberReader;
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
@@ -27,7 +28,6 @@ import br.uern.wellisonraul.drogaria.dominio.Execucao;
 import br.uern.wellisonraul.drogaria.dominio.Fabricante;
 import br.uern.wellisonraul.drogaria.dominio.Produto;
 import br.uern.wellisonraul.drogaria.dominio.Servico;
-import br.uern.wellisonraul.util.UtilitarioConfiguracao;
 
 @SuppressWarnings("serial")
 @ManagedBean
@@ -35,6 +35,7 @@ import br.uern.wellisonraul.util.UtilitarioConfiguracao;
 public class RepoService implements Serializable{
 	private Servico servico;
 	private List<Servico> servicos;
+	private LineNumberReader lineRead;
 	
 	public Servico getServico() {
 		return servico;
@@ -168,11 +169,11 @@ public class RepoService implements Serializable{
 					
 					execucao.setEvento("start");
 					execucao.setNome_servico(s.getNome()+s.getCodigo());
-					System.out.println(s.getNome());
 					execucao.setTempo(tempo);
 					execucaoDAO.salvar(execucao);
 					
 					// INFORMA A EXECUÇÃO
+					System.out.println("Inicializando serviço:"+s.getNome());
 					System.out.println("Tentativa número 1");
 					
 					// CASO DÊ ERRADO TENTE MAIS DUAS VEZES.
@@ -203,14 +204,13 @@ public class RepoService implements Serializable{
 						
 						execucao.setEvento("start");
 						execucao.setNome_servico(s.getNome()+s.getCodigo());
-						System.out.println(s.getNome());
 						execucao.setTempo(tempo);
 						execucaoDAO.salvar(execucao);
 					}
 					
 					// SERVIDOR RESPONDE CORRETAMENTE
 					if(resposta.getStatus()==200){
-						System.out.println(s.getNome());
+						
 						if(s.getNome().equals("buscarFabricante")){
 							try {
 								
@@ -224,12 +224,32 @@ public class RepoService implements Serializable{
 									// TODO Auto-generated catch block
 									e1.printStackTrace();
 								}
-								
+								// TESTE 1
 								int resultado = (int) s.getTempo_execucao();
 								buferizadorArquivo.write(String.valueOf(resultado));
 								buferizadorArquivo.newLine();
+								
 								buferizadorArquivo.close();
 								escreveArquivo.close();
+								/*
+								long tamanhoArquivo = arquivoDeConversao.length();
+								int numLinhas = 0;
+								try {
+									// PARAMÊTROS PARA LEITURA NECESSÁRIOS
+									FileInputStream fs = new FileInputStream(arquivoDeConversao);
+									DataInputStream in = new DataInputStream(fs);	
+									lineRead = new LineNumberReader(new InputStreamReader(in));
+									lineRead.skip(tamanhoArquivo);
+									numLinhas = lineRead.getLineNumber() + 1;
+								} catch (IOException e) {
+									e.printStackTrace();
+								}
+								
+								if(numLinhas==100){
+									System.out.println("\n\n\n\nCOMPLETO!\n\n\n\n");
+								}else{
+									System.out.println("Número de linhas igual a: "+numLinhas);
+								}*/
 								
 							} catch (IOException e) {
 								// TODO Auto-generated catch block
@@ -246,7 +266,6 @@ public class RepoService implements Serializable{
 						
 						execucao.setEvento("complete");
 						execucao.setNome_servico(s.getNome()+s.getCodigo());
-						System.out.println(s.getNome());
 						execucao.setTempo(tempo);
 						execucaoDAO.salvar(execucao);
 						
@@ -261,8 +280,6 @@ public class RepoService implements Serializable{
 					
 					// URI INVALIDO
 					if(resposta.getStatus()==404){
-						
-						
 						if(s.getNome().equals("buscarFabricante")){
 							try {
 								File arquivoDeConversao = new File("/home/wellisonraul/saida_teste1_prom.txt"); // CRIA O ARQUIVO

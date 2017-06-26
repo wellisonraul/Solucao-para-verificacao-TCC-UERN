@@ -9,5 +9,6 @@ public class UtilitarioConfiguracao {
 	public static final String PROM_SAIDA = "ESTE ARQUIVO NÃO ESTÁ NO PROJETO/ ALTERE-O NA PASTA EE.TKASEKAMP.LTLMINER.STARTTEST.JAVA";
 	public static final String MCL = "/home/wellisonraul/cadp/com/M_A1.mcl";
 	// 0 PARA PROM - 1 PARA CADP
-	public static final int FERRAMENTA = 0;
+	public static final int FERRAMENTA = 1;
+	public static final int TRACES = 5;
 }

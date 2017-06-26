@@ -10,6 +10,7 @@ import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 
 import br.uern.wellisonraul.drogaria.util.HibernateUtil;
+import br.uern.wellisonraul.util.UtilitarioConfiguracao;
 
 public class GenericDAO<Entidade> {
 	private Class<Entidade> classe;
@@ -106,9 +107,7 @@ public class GenericDAO<Entidade> {
 			consulta.add(Restrictions.gt("codigo", inicio_banco));
 			consulta.add(Restrictions.eq("evento","complete"));
 			consulta.add(Restrictions.like("nome_servico", "quantidadeProdutos%"));
-			consulta.setMaxResults(5);
-			
-			System.out.println(consulta.list());
+			consulta.setMaxResults(UtilitarioConfiguracao.TRACES);
 			List<Entidade> resultado = consulta.list();
 			return resultado;
 		} catch (RuntimeException erro) {

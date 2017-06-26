@@ -1,9 +1,14 @@
 package br.uern.wellisonraul.threads;
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;
+import java.io.IOException;
+import java.util.HashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import br.uern.wellisonraul.adaptacoes.tipo.ConversaoArquivos;
@@ -97,21 +102,82 @@ public class Verificador{
 		}else{
 			File arquivo = ca.conversaoCADP(execucoes);
 			
+			// TRATAMENTO PARA O CADP FUNCIONAR PARECIDO COM O PROM
+			Map<String, Integer> mapaNomes = new HashMap<String, Integer>();
+			
+			try {
+			      FileReader arq = new FileReader(arquivo);
+			      BufferedReader lerArq = new BufferedReader(arq);
+			 
+			      String linha = lerArq.readLine();
+			      
+			      while (linha != null) {
+			        if(linha.contains("INVOKE_SERVICE_")){
+			        	String sub_string = linha.substring(16, linha.length()-1);
+			        	if(mapaNomes.containsKey(sub_string)){
+			        		int quantidade = mapaNomes.get(sub_string);
+			        		mapaNomes.put(sub_string, quantidade++);
+			        	}else{
+			        		mapaNomes.put(sub_string, 1);
+			        	}
+			        }
+			        linha = lerArq.readLine(); // lê da segunda até a última linha
+			      }
+			 
+			      arq.close();
+			    } catch (IOException e) {
+			        System.err.printf("Erro na abertura do arquivo: %s.\n",
+			          e.getMessage());
+			    }
+			
 			for (String nomeServico : colecaoSet) {
 				// ESCREVE O ARQUIVO
 				File arquivoDeConversao = new File(UtilitarioConfiguracao.MCL); // CRIA O ARQUIVO
+				arquivoDeConversao.delete();
 				
 				// CLASSE PARA CRIAÇÃO DO ARQUIVO MCL
 				FileWriter escreveArquivo = new FileWriter(arquivoDeConversao);
 				BufferedWriter buferizadorArquivo = new BufferedWriter(escreveArquivo);
 				
-				buferizadorArquivo.write("macro M_A1 (A1) = [true* . A1] false end_macro M_A1('ERROR_SERVICE_"+nomeServico.toUpperCase()+"')");
+				/*if(mapaNomes.containsKey(nomeServico.toUpperCase())){
+					System.out.println("O serviço "+nomeServico.toUpperCase()+" contém: "+mapaNomes.get(nomeServico.toUpperCase()));
+				}*/
+				
+				/* 0 - 9 nenhum vez*/
+				/* 10 - 19 máximo 1 */
+				/* 11-20 - no máximo */
+				
+				int qtdMacro = 0, qtdVezes = 0;
+				double qtdMinimo = 0;
+				
+				System.out.println("Nome serviço: "+nomeServico+" valor "+mapaNomes.get(nomeServico.toUpperCase()));
+				if(mapaNomes.get(nomeServico.toUpperCase())==null){
+					qtdMacro = 1;
+					System.out.println("id:null");
+				}else{
+					qtdMacro = mapaNomes.get(nomeServico.toUpperCase());	
+				}
+				
+				qtdMinimo = qtdMacro * 0.9;
+				qtdVezes = (int) Math.ceil(qtdMinimo)-1;
+				qtdVezes = qtdMacro - qtdVezes;
+				
+				System.out.println("Variável quantidade de vezes: "+qtdVezes);
+				
+				buferizadorArquivo.write("macro M_A1 (P) = [");
+				for(int i=0; i<qtdVezes; i++){
+					buferizadorArquivo.write("(not P)*. P");
+					if((qtdVezes-1)!=i) buferizadorArquivo.write("");
+				}
+				buferizadorArquivo.write("] false end_macro M_A1('ERROR_SERVICE_"+nomeServico.toUpperCase()+"')");
 				
 				buferizadorArquivo.close();
 				escreveArquivo.close();
 				
 				// CHAMA O TESTE COM O MCL MODIFICADO
 				boolean resultado = ife.chamarCADP(arquivo);
+				System.out.println("O serviço " + nomeServico + " tem o valor:" + resultado);
+				
 				
 				if(resultado==false){
 					// PODE ENCONTRAR NO BANCO
@@ -137,14 +203,7 @@ public class Verificador{
 				}
 			}
 			
-			
+		System.out.println("Encerrou os testes!\n\n\n\n\n\n\n\n\n\n");
 		}
-	}
-	
-	// MÉTODO RESPOSÁVEL POR VERIFICADOR O CADP
-	public String VerificadorCADP(List<Execucao> execucoes){
-	
-		
-		return "";
 	}
 }

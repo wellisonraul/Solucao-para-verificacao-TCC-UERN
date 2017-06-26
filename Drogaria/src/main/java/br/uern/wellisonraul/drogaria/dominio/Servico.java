@@ -22,8 +22,7 @@ public class Servico extends GenericDomain{
 	
 	@Column(nullable = false)
 	private double tempo_execucao;
-	
-	
+		
 	public double getTempo_execucao() {
 		return tempo_execucao;
 	}

@@ -31,7 +31,6 @@ public class ExecucaoThread implements Runnable{
 				}catch(Exception e){
 					System.out.println(e);
 				}
-				
 			}
 			
 			// ESPERA 3 SEGUNDOS

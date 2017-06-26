@@ -33,16 +33,17 @@ public class ConversaoArquivos {
 		}*/
 		
 		int qtdStart = 0;
+		String nome_servico_auxiliar = "null";
 		// FOR PARA CRIAR OS TRACES
+		
+		
 		for (Execucao valoresArray: entradaBDCADP) {
 			if(valoresArray.getEvento().equals("start")){
 				if(qtdStart==3){
 					if(valoresArray.getEvento().equals("start")){
-						System.out.println("Troca de serviço e erro!");
-						
-						buferizadorArquivo.write("\"INVOKE_SERVICE_"+valoresArray.getNome_servico().toUpperCase()+"\""); // ESCREVE PROPRIEDADE
+						buferizadorArquivo.write("\"INVOKE_SERVICE_"+nome_servico_auxiliar.toUpperCase()+"\""); // ESCREVE PROPRIEDADE
 						buferizadorArquivo.newLine(); // QUEBRA LINHA
-						buferizadorArquivo.write("\"ERROR_SERVICE_"+valoresArray.getNome_servico().toUpperCase()+"\""); // ESCREVE PROPRIEDADE
+						buferizadorArquivo.write("\"ERROR_SERVICE_"+nome_servico_auxiliar.toUpperCase()+"\""); // ESCREVE PROPRIEDADE
 						buferizadorArquivo.newLine(); // QUEBRA LINHA
 						
 						qtdStart = 1;
@@ -52,6 +53,7 @@ public class ConversaoArquivos {
 					}
 				}else{
 					qtdStart++;
+					if(qtdStart==3) nome_servico_auxiliar = valoresArray.getNome_servico();
 					continue;
 				}
 			}
@@ -61,7 +63,6 @@ public class ConversaoArquivos {
 				buferizadorArquivo.newLine(); // QUEBRA LINHA
 				buferizadorArquivo.write("\"RESPONSE_SERVICE_"+valoresArray.getNome_servico().toUpperCase()+"\""); // ESCREVE PROPRIEDADE
 				buferizadorArquivo.newLine(); // QUEBRA LINHA
-				System.out.println("Serviço completo com "+qtdStart);
 				qtdStart = 0;
 			}
 		
