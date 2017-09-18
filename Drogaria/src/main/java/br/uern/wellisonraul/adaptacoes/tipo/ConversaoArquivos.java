@@ -48,8 +48,6 @@ public class ConversaoArquivos {
 						
 						qtdStart = 1;
 						continue;
-					}else{
-						System.out.println("O próximo passo irá completar!");
 					}
 				}else{
 					qtdStart++;

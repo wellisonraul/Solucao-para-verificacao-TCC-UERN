@@ -151,6 +151,7 @@ public class Verificador{
 				double qtdMinimo = 0;
 				
 				System.out.println("Nome serviço: "+nomeServico+" valor "+mapaNomes.get(nomeServico.toUpperCase()));
+				// POSSO REMOVER ISSO AQUI
 				if(mapaNomes.get(nomeServico.toUpperCase())==null){
 					qtdMacro = 1;
 					System.out.println("id:null");
@@ -164,6 +165,7 @@ public class Verificador{
 				
 				System.out.println("Variável quantidade de vezes: "+qtdVezes);
 				
+				// TEM UM ERRO AQUI
 				buferizadorArquivo.write("macro M_A1 (P) = [");
 				for(int i=0; i<qtdVezes; i++){
 					buferizadorArquivo.write("(not P)*. P");
@@ -175,7 +177,7 @@ public class Verificador{
 				escreveArquivo.close();
 				
 				// CHAMA O TESTE COM O MCL MODIFICADO
-				boolean resultado = ife.chamarCADP(arquivo);
+				boolean resultado = ife.chamarCADP(arquivo.toString());
 				System.out.println("O serviço " + nomeServico + " tem o valor:" + resultado);
 				
 				

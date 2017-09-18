@@ -1,9 +1,12 @@
 package br.uern.wellisonraul.engine;
 
 import java.io.BufferedWriter;
+import java.io.DataInputStream;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.LineNumberReader;
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
@@ -224,6 +227,7 @@ public class RepoService implements Serializable{
 									// TODO Auto-generated catch block
 									e1.printStackTrace();
 								}
+								
 								// TESTE 1
 								int resultado = (int) s.getTempo_execucao();
 								buferizadorArquivo.write(String.valueOf(resultado));
@@ -231,9 +235,10 @@ public class RepoService implements Serializable{
 								
 								buferizadorArquivo.close();
 								escreveArquivo.close();
-								/*
+								
 								long tamanhoArquivo = arquivoDeConversao.length();
 								int numLinhas = 0;
+								
 								try {
 									// PARAMÊTROS PARA LEITURA NECESSÁRIOS
 									FileInputStream fs = new FileInputStream(arquivoDeConversao);
@@ -245,17 +250,16 @@ public class RepoService implements Serializable{
 									e.printStackTrace();
 								}
 								
-								if(numLinhas==100){
+								if(numLinhas==110){
 									System.out.println("\n\n\n\nCOMPLETO!\n\n\n\n");
 								}else{
 									System.out.println("Número de linhas igual a: "+numLinhas);
-								}*/
+								}
 								
 							} catch (IOException e) {
 								// TODO Auto-generated catch block
 								e.printStackTrace();
 							}
-							
 							
 						}
 						
@@ -280,7 +284,7 @@ public class RepoService implements Serializable{
 					
 					// URI INVALIDO
 					if(resposta.getStatus()==404){
-						if(s.getNome().equals("buscarFabricante")){
+						/*if(s.getNome().equals("buscarFabricante")){
 							try {
 								File arquivoDeConversao = new File("/home/wellisonraul/saida_teste1_prom.txt"); // CRIA O ARQUIVO
 								FileWriter escreveArquivo = null;
@@ -303,7 +307,7 @@ public class RepoService implements Serializable{
 								// TODO Auto-generated catch block
 								e.printStackTrace();
 							}
-						}
+						}*/
 						
 						
 						System.out.println("Serviço "+s.getNome()+" na posição "+(contador+1)+" não funcionando erro: "+resposta.getStatus()); // RESOLVER AQUI DEPOIS

@@ -2,12 +2,17 @@ package br.uern.wellisonraul.threads;
 
 import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import br.uern.wellisonraul.drogaria.dao.ExecucaoDAO;
 import br.uern.wellisonraul.drogaria.dao.XlogDAO;
 import br.uern.wellisonraul.drogaria.dominio.Execucao;
 import br.uern.wellisonraul.drogaria.dominio.Xlog;
+import br.uern.wellisonraul.drogaria.mapek.Analisador;
+import br.uern.wellisonraul.drogaria.mapek.Executador;
+import br.uern.wellisonraul.drogaria.mapek.Monitor;
+import br.uern.wellisonraul.drogaria.mapek.Planejador;
 
 public class MonitorThread implements Runnable{
 	Long inicio, ultimo = null;
@@ -15,62 +20,19 @@ public class MonitorThread implements Runnable{
 	List<Execucao> execucoes = null;
 	String log;
 	
-	
-	/*@Override
-	public void run() {
-		while(true){
-			try {
-				// ZERA AS VARIAVEIS
-				colecaoSet = null;
-				execucoes = null;
-				log = null;
-				verificador = null;
-				// ESPERA 10 SEGUNDOS
-				Thread.sleep(10000);
-				// INICIO DO BANCO PARA XES
-				inicio = inicioBanco();
-				// FINAL DO BANCO PARA XES
-				ultimo = finalBanco(inicio);
-				// VERIFICADOR PARA TRANSFORMAR O XES
-				Verificador v = new Verificador();
-				
-				// TRANSFORMAR O XES
-				// Consulta quais valores devem ser utilizados
-				execucoes = v.ConsultaInstâncias(inicio, ultimo);
-				// Cria o XES
-				log = v.criaXES(execucoes);
-				// Recebe os serviços que foram usados nessa composição.
-				colecaoSet = v.Colecao(execucoes);
-				
-				verificador = new VerificadorThread(colecaoSet,log);
-				Thread threadVerificador = new Thread(verificador);
-				threadVerificador.start();
-				
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
-		
-		
-	}*/
-	
 	@Override
 	public void run() {
+		Monitor monitor = new Monitor();
+		Analisador analisador = new Analisador();
+		Planejador planejador = new Planejador();
+		Executador executador = new Executador();
 		try{
 			while(true){
 				Thread.sleep(13000);
-				// INICIO DO BANCO PARA XES
-				inicio = inicioBanco();
-				// FINAL DO BANCO PARA XES
-				ultimo = finalBanco(inicio);
-				// VERIFICADOR PARA TRANSFORMAR O XES
-				Verificador v = new Verificador();
-				List <Execucao> execucoes = v.ConsultaInstâncias(inicio, ultimo);
-				v.VerificadorFerramentas(execucoes);
+				Set<String> colecao = monitor.retornaArquivo();
+				Map<String,Double> adaptacoes = analisador.analisar(colecao);
+				Map<String,Double> adaptacoes2 = planejador.planejar(adaptacoes);
+				executador.executar(adaptacoes2);
 			}
 			
 		}catch(Exception e){

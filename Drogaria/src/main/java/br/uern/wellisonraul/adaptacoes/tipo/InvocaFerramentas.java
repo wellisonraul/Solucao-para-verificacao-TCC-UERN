@@ -13,15 +13,14 @@ import ee.tkasekamp.ltlminer.StarterTest;
 
 public class InvocaFerramentas {
 	
-	public boolean chamarCADP(File arquivo) throws IOException{		
+	public boolean chamarCADP(String arquivo) throws IOException{		
 		// COMANDO PARA EXECUTAR O TERMINAL
 		Runtime r = Runtime.getRuntime();
 		System.out.println();
 		Process p = r.exec(new String[]{"/bin/bash", "-c", "cd /home/wellisonraul/cadp/com && ./seq.open "+arquivo+" evaluator -verbose -bfs -diag evuluator.bcg ./M_A1.mcl"});
 		
 		// Impressão no arquivo.txt
-		return saidaCADP(p);
-		
+		return saidaCADP(p);	
 	}
 	
 	public boolean saidaCADP(Process p) throws IOException{
@@ -32,7 +31,7 @@ public class InvocaFerramentas {
 	    final InputStream is = p.getInputStream();
 		final InputStreamReader isr = new InputStreamReader(is);
 		br = new BufferedReader(isr);
-			    
+		
 		// CRIA O ARQUIVO
 		File saida = new File(UtilitarioConfiguracao.CADP_SAIDA);
 			    
@@ -51,17 +50,13 @@ public class InvocaFerramentas {
 		boolean result = true;
 		while((resultado = br.readLine()) != null) {
 			if(resultado.contains("FALSE") || resultado.contains("TRUE")){
-				if(resultado.contains("FALSE")){
-					result = false;
-				}else{
-					result = true;
-				}
-				
+				if(resultado.contains("FALSE")) result = false;
 				bw.write(resultado);
 				bw.newLine();
-				
 			}
+			
 		}    
+		
 		
 		//fecha os recursos
 		bw.close();
