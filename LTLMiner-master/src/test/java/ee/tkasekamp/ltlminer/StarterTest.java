@@ -44,7 +44,7 @@ public class StarterTest {
 		props.setProperty("logPath", caminhoLog);
 		props.setProperty("minSupport", "0.1");
 		props.setProperty("outputFormat", "console");
-		props.setProperty("outputPath", "/home/wellisonraul/saidaPROM.txt");
+		props.setProperty("outputPath", "/home/wellisonraul/Downloads/ProgramacaoWeb-master/216_Tema_PrimeFaces/Drogaria/src/main/resources/saida_prom.txt");
 		String queries = "";
 		if (idConsulta==1) queries = "\"[](( (?x)  ->  <>(?y)))\"; \"<>(?x)\"";
 		if (idConsulta==2) queries = "\"<>(?x{"+nomeServico+"})\"";
